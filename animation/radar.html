@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Radar</title>
+    <style>
+      body {
+        background: black;
+      }
+      
+      #circles {
+        padding: 0;
+        width: 800px;
+        height: 800px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -400px;
+        margin-left: -400px;
+      }
+      
+      #circles ul {
+        padding: 0;
+        margin: 0;
+      }
+      
+      #circles li {
+        border: 2px solid #74ea33;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        /*-webkit-animation-name: dimglow;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-direction: alternate;*/      
+        }
+      
+      #circles li:first-child {
+        width: 40px;
+        height: 40px;
+        margin-left: -22px;
+        margin-top: -22px;
+        -webkit-animation-duration: 2s;
+      }
+      
+      #circles li:nth-child(2) {
+        width: 140px;
+        height: 140px;
+        margin-left: -72px;
+        margin-top: -72px;
+        -webkit-animation-duration: 3s;
+      }
+      
+      #circles li:nth-child(3) {
+        width: 240px;
+        height: 240px;
+        margin-left: -122px;
+        margin-top: -122px;
+        -webkit-animation-duration: 4s;
+      }
+      
+      #circles li:nth-child(4) {
+        width: 340px;
+        height: 340px;
+        margin-left: -172px;
+        margin-top: -172px;
+        -webkit-animation-duration: 5s;
+      }
+      
+      #circles li:nth-child(5) {
+        width: 440px;
+        height: 440px;
+        margin-left: -222px;
+        margin-top: -222px;
+        -webkit-animation-duration: 6s;
+      }
+      
+      #circles li:nth-child(6) {
+        width: 540px;
+        height: 540px;
+        margin-left: -272px;
+        margin-top: -272px;
+        -webkit-animation-duration: 7s;
+      }
+            
+      #circles li:nth-child(7) {
+        width: 640px;
+        height: 640px;
+        margin-left: -322px;
+        margin-top: -322px;
+        -webkit-animation-duration: 8s;
+      }
+      
+      #circles li:last-child {
+        width: 740px;
+        height: 740px;
+        margin-left: -372px;
+        margin-top: -372px;
+        -webkit-animation-duration: 9s;
+      }
+      
+      #pie {
+        width: 372px;
+        height: 372px;
+        border-radius: 0 100% 0 0;
+        background-image:-webkit-linear-gradient(left bottom, #74ea33 .1%, #000 74%);
+        opacity: 0.45;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -372px;
+        -webkit-animation-name: rotate;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-duration: 4s;
+        -webkit-transform-origin: 0 100%;
+      }
+      
+      @-webkit-keyframes rotate {
+        from { -webkit-transform: rotate(0deg) }
+        to { -webkit-transform: rotate(360deg) }
+      }
+      
+      @-webkit-keyframes dimglow {
+        from { opacity: 1 }
+        to { opacity: 0 }
+      }
+      
+      .objects {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        -webkit-animation-duration: 5s;
+      }
+      
+      #obj1 {
+        background: #ea3333;
+        -webkit-animation-name: motion1;
+      }
+      
+      #obj2 {
+        top: 300px;
+        left: 450px;
+        background: #ff7800;
+      }
+      
+      #obj3 {
+        top: 100px;
+        right: 200px;
+        background: white;
+      }
+      
+      @-webkit-keyframes motion1 {
+        from { 
+          top: 0; 
+          left: 0;
+        }
+        to {
+          -webkit-transform: translate(800px, 800px);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="circles">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div id="pie"></div>
+      <div id="obj1" class="objects"></div>
+    </div>
+  </body>
+</html>

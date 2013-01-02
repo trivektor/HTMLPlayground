@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Curtains</title>
+  <style>
+    body {
+      background: black;
+      height: 100%;
+    }
+    
+    #curtain {
+      position: absolute;
+      top: 50%;
+      left: 0;
+      width: 1px;
+      height: 1px;
+      background: red;
+      -webkit-animation: horizontal_grow 4s 0 1 normal forwards, vertical_grow 4s 4s 1 normal forwards;
+    }
+    
+    @-webkit-keyframes horizontal_grow {
+      0% { width: 1px }
+      100% { width: 100% }
+    }
+    
+    @-webkit-keyframes vertical_grow {
+      0% { height: 1px }
+      100% { height: 90%; top: 5%; bottom: 5% }
+    }
+    
+    #circle {
+      position: absolute;
+      top: 50%;
+      left: -80px;
+      width: 80px;
+      height: 80px;
+      margin-top: -40px;
+      margin-left: -40px;
+      background: #fff;
+      border-radius: 50%;
+      -webkit-animation-name: moving_circle;
+      -webkit-animation-delay: 8s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-duration: 4s;
+      -webkit-animation-fill-mode: forwards;
+      -webkit-animation: moving_circle 4s 8s 1 linear forwards, expand_circle 4s 12s 1 linear forwards;
+    }
+    
+    @-webkit-keyframes moving_circle {
+      from { left: 0;  }
+      to { left: 50%; opacity: 1 }
+    }
+    
+    @-webkit-keyframes expand_circle {
+      from { width: 80px; height: 80px }
+      to { width: 320px; height: 320px; margin-top: -160px; margin-left: -160px }
+    }
+  </style>
+</head>
+<body>
+  <div id="curtain">
+  </div>
+  <div id="circle">
+  </div>
+</body>
+</html>

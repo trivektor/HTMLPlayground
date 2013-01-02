@@ -1,0 +1,12 @@
+canvas {
+  position: absolute;
+}
+
+#game {
+  z-index: 100;
+}
+
+#terrain {
+  z-index: 10;
+  background: #aaa;
+}

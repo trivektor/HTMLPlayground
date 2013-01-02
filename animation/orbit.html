@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Solar System Orbits</title>
+  <style>
+    body {
+      background: black;
+    }
+    
+    body, html {
+      height: 100%;
+    }
+  
+    .body {
+      border-radius: 50%;
+    }
+    
+    #sun {
+      width: 160px;
+      height: 160px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -80px;
+      margin-top: -80px;
+      background: orange;
+    }
+    
+    .orbit {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 2px solid #333;
+      border-radius: 50%;
+      -webkit-animation-iteration-count: infinite;
+      -webkit-animation-timing-function: linear;
+                 -webkit-animation-name: orbit;
+    }
+    
+    #mercury_orbit {
+      width: 240px;
+      height: 240px;
+      margin-top: -122px;
+      margin-left: -122px;
+    }
+    
+    #venus_orbit {
+      width: 280px;
+      height: 280px;
+      margin-top: -142px;
+      margin-left: -142px;
+    }
+    
+    #earth_orbit {
+      width: 320px;
+      height: 320px;
+      margin-top: -164px;
+      margin-left: -164px;
+    }
+    
+    .planet {
+      width: 10px;
+      height: 10px;
+      position: absolute;
+    }
+    
+    #mercury {
+      top: 28px;
+      left: 30px;
+      background: white;
+    }
+    
+    #venus {
+      top: 177px;
+      left: 0;
+      background: grey;
+    }
+    
+    #earth {
+      background: #55a1d5;
+      top: 90px;
+      left: 8px;
+    }
+    
+    @-webkit-keyframes orbit {
+      from { -webkit-transform:rotate(0deg) }
+      to { -webkit-transform:rotate(360deg) }
+    }
+    
+    #mercury_orbit {
+      -webkit-animation-duration: 5s
+    }
+    
+    #venus_orbit {
+      -webkit-animation-duration: 10s
+    }
+    
+    #earth_orbit {
+      -webkit-animation-duration: 15s;
+    }
+  </style>
+</head>
+<body>
+  <div id="sun" class="body">
+  </div>
+  
+  <div id="mercury_orbit" class="orbit">
+    <div id="mercury" class="planet body"></div>
+  </div>
+  <div id="venus_orbit" class="orbit">
+    <div id="venus" class="planet body"></div>
+  </div>
+  <div id="earth_orbit" class="orbit">
+    <div id="earth" class="planet body"></div>
+  </div>
+</body>
+</html>

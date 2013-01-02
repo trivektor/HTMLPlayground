@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>iPhone step back animation</title>
+  <style>
+    body {
+      background: black;
+      -webkit-perspective: 800px;
+    }
+
+    #plane1 {
+      background: white;
+      height: 200px;
+      margin: 200px auto;
+      -webkit-box-pack: center;
+      -webkit-box-align: center;
+      display: -webkit-box;
+      -webkit-transform: translateZ(-300px)
+    }
+    
+    @-webkit-keyframes translate_pulse {
+      from { -webkit-transform: translateZ(-300px) }
+      to { -webkit-transform: translateZ(300px) }
+    }
+  </style>
+</head>
+<body>
+  <div id="plane1">
+    Plane 1
+  </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tabs</title>
+    <style>
+      body {
+        font-family: Arial;
+        font-size: 20px;
+      }
+      
+      #tabs {
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .tab {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      
+      .tab .content p { 
+        padding: 20px;
+        margin: 0;
+      }
+      
+      .tab a {
+        background: orange;
+        display: block;
+        color: #fff;
+        padding: 20px;
+        text-decoration: none ;
+      }
+      
+      .tab .content {
+        overflow: hidden;
+        -webkit-transition: height 1s ease;
+      }
+      
+      li:not(:target) .content {
+        height: 0;
+      }
+      
+      li:target .content {
+        height: 200px;
+      }
+    </style>
+  </head>
+  <body>
+    <menu id="tabs">
+      <li class="tab" id="tab1">
+        <a href="#tab1">First tab</a>
+        <div class="content">
+          <p>Content of first tab</p>
+        </div>
+      </li>
+      <li class="tab" id="tab2">
+        <a href="#tab2">Second tab</a>
+        <div class="content">
+          <p>Content of second tab</p>
+        </div>
+      </li>
+      <li class="tab" id="tab3">
+        <a href="#tab3">Third tab</a>
+        <div class="content">
+          <p>Content of third tab</p>
+        </div>
+      </li>
+      
+    </menu>
+  </body>
+</html>
